@@ -1,0 +1,57 @@
+{
+    "name": "stayallive/laravel-passport-memoized",
+    "type": "library",
+    "description": "Laravel Passport memoized repositories.",
+    "keywords": [
+        "laravel",
+        "passport",
+        "memoized"
+    ],
+    "homepage": "https://github.com/stayallive/laravel-passport-memoized",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Bouma",
+            "email": "alex@bouma.me"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^9.0",
+        "laravel/passport": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stayallive\\Laravel\\Passport\\Memoized\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stayallive\\Laravel\\Passport\\Memoized\\ServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "3.8.*",
+        "laravel/octane": "^1.2",
+        "orchestra/testbench": "^7.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --stop-on-failure",
+        "test:ci": "vendor/bin/phpunit",
+        "phpcs": "vendor/bin/php-cs-fixer fix",
+        "phpcs:ci": "vendor/bin/php-cs-fixer fix --dry-run --diff"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true
+    }
+}
