@@ -19,7 +19,7 @@ It's safe to use with [Laravel Octane](https://github.com/laravel/octane) since 
 
 ## Why a package?
 
-And not a PR to [Laravel Passport](https://github.com/laravel/passport)? This was [attempted](https://github.com/laravel/passport/pull/1433) in the past but it was decided to not be changed so this package was created as an alternative.
+And not a PR to [Laravel Passport](https://github.com/laravel/passport)? This was [attempted](https://github.com/laravel/passport/pull/1433) (although not a perfect solution yet) in the past but it was decided to not be changed so this package was created as an alternative. See also [this](https://github.com/laravel/passport/issues/382) pinned issue for more information and [another package](https://github.com/overtrue/laravel-passport-cache-token) if you are looking for an alternative solution.
 
 ## Installation
 
