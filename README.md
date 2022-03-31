@@ -17,6 +17,10 @@ This package replaces the client and token repositories with ones that memoize t
 
 It's safe to use with [Laravel Octane](https://github.com/laravel/octane) since we make sure that the memoize cache is cleared after each request to prevent stale caches.
 
+## Why a package?
+
+And not a PR to [Laravel Passport](https://github.com/laravel/passport)? This was [attempted](https://github.com/laravel/passport/pull/1433) in the past but it was decided to not be changed so this package was created as an alternative.
+
 ## Installation
 
 ```bash
