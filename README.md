@@ -2,7 +2,7 @@
 
 [![Latest Version](https://img.shields.io/github/release/stayallive/laravel-passport-memoized.svg?style=flat-square)](https://github.com/stayallive/laravel-passport-memoized/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/github/workflow/status/stayallive/laravel-passport-memoized/CI/master.svg?style=flat-square)](https://github.com/stayallive/laravel-passport-memoized/actions/workflows/ci.yaml)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/stayallive/laravel-passport-memoized/ci.yaml?branch=master&style=flat-square)](https://github.com/stayallive/laravel-passport-memoized/actions/workflows/ci.yaml)
 [![Total Downloads](https://img.shields.io/packagist/dt/stayallive/laravel-passport-memoized.svg?style=flat-square)](https://packagist.org/packages/stayallive/laravel-passport-memoized)
 
 [Laravel Passport](https://github.com/laravel/passport) comes with repositories for the underlying [oauth2-server](https://github.com/thephpleague/oauth2-server) that result in
