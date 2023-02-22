@@ -18,11 +18,12 @@ class ServiceProvider extends LaravelServiceProvider
     public function register(): void
     {
         $this->app->singleton(TokenRepository::class, MemoizedTokenRepository::class);
-        $this->app->extend(ClientRepository::class, static function (ClientRepository $repository) {
-            return new MemoizedClientRepository(
+        $this->app->extend(
+            ClientRepository::class,
+            static fn (ClientRepository $repository) => new MemoizedClientRepository(
                 $repository->getPersonalAccessClientId(),
                 $repository->getPersonalAccessClientSecret(),
-            );
-        });
+            ),
+        );
     }
 }
