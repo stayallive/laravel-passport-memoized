@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^8.0.2",
-        "laravel/framework": "^9.0",
+        "laravel/framework": "^9||^10",
         "laravel/passport": "^10||^11"
     },
     "autoload": {
@@ -33,7 +33,7 @@
         }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "3.8.*",
+        "friendsofphp/php-cs-fixer": "^3.14",
         "laravel/octane": "^1.2",
         "orchestra/testbench": "^7.0",
         "phpunit/phpunit": "^9.3"
