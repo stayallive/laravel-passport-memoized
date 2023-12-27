@@ -10,7 +10,16 @@ class OctaneOperationTerminatedListener
 {
     public function handle(OperationTerminated $event): void
     {
-        $event->app->forgetInstance(TokenRepository::class);
-        $event->app->forgetInstance(ClientRepository::class);
+        $repositories = [
+            $event->app()->make(TokenRepository::class),
+            $event->app()->make(ClientRepository::class),
+        ];
+
+        foreach ($repositories as $repository) {
+            if ($repository instanceof MemoizedRepository) {
+                $repository->clearInternalCache();
+            }
+        }
     }
+
 }

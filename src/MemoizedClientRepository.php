@@ -5,7 +5,7 @@ namespace Stayallive\Laravel\Passport\Memoized;
 use Laravel\Passport\Client;
 use Laravel\Passport\ClientRepository;
 
-class MemoizedClientRepository extends ClientRepository
+class MemoizedClientRepository extends ClientRepository implements MemoizedRepository
 {
     private array $cache = [];
 
@@ -50,5 +50,10 @@ class MemoizedClientRepository extends ClientRepository
         unset($this->cache[$client->id]);
 
         parent::delete($client);
+    }
+
+    public function clearInternalCache(): void
+    {
+        $this->cache = [];
     }
 }

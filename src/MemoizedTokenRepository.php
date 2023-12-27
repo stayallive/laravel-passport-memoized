@@ -5,7 +5,7 @@ namespace Stayallive\Laravel\Passport\Memoized;
 use Laravel\Passport\Token;
 use Laravel\Passport\TokenRepository;
 
-class MemoizedTokenRepository extends TokenRepository
+class MemoizedTokenRepository extends TokenRepository implements MemoizedRepository
 {
     private array $cache = [];
 
@@ -39,5 +39,10 @@ class MemoizedTokenRepository extends TokenRepository
         unset($this->cache[$id]);
 
         return parent::revokeAccessToken($id);
+    }
+
+    public function clearInternalCache(): void
+    {
+        $this->cache = [];
     }
 }
