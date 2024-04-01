@@ -27,6 +27,17 @@ class MemoizedClientRepository extends ClientRepository implements MemoizedRepos
             : null;
     }
 
+    public function personalAccessClient(): Client
+    {
+        $client = parent::personalAccessClient();
+
+        if ($client !== null) {
+            $this->cache[$client->id] = $client;
+        }
+
+        return $client;
+    }
+
     public function update(Client $client, $name, $redirect): Client
     {
         $client = parent::update($client, $name, $redirect);
@@ -55,12 +66,5 @@ class MemoizedClientRepository extends ClientRepository implements MemoizedRepos
     public function clearInternalCache(): void
     {
         $this->cache = [];
-    }
-
-    public function personalAccessClient(): Client
-    {
-        $client = parent::personalAccessClient();
-        $this->cache[$client->id] = $client;
-        return $client;
     }
 }
