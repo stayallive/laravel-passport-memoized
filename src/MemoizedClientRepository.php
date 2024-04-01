@@ -56,4 +56,11 @@ class MemoizedClientRepository extends ClientRepository implements MemoizedRepos
     {
         $this->cache = [];
     }
+
+    public function personalAccessClient(): Client
+    {
+        $client = parent::personalAccessClient();
+        $this->cache[$client->id] = $client;
+        return $client;
+    }
 }
