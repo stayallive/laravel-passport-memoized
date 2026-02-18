@@ -5,6 +5,9 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/stayallive/laravel-passport-memoized/ci.yaml?branch=master&style=flat-square)](https://github.com/stayallive/laravel-passport-memoized/actions/workflows/ci.yaml)
 [![Total Downloads](https://img.shields.io/packagist/dt/stayallive/laravel-passport-memoized.svg?style=flat-square)](https://packagist.org/packages/stayallive/laravel-passport-memoized)
 
+> [!NOTE]  
+> This package was only needed for Passport < 13, they have since fixed this performance in the package itself so this package is no longer maintained. You can still use this package for Passport 10-12 or upgrade to Passport 13+
+
 [Laravel Passport](https://github.com/laravel/passport) comes with repositories for the underlying [oauth2-server](https://github.com/thephpleague/oauth2-server) that result in
 multiple queries to retrieve the same exact object from the database in a single request. With a good database engine this will have a small impact in the range of
 milliseconds but this is still unacceptable and should be avoided if possible.
